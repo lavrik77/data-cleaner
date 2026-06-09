@@ -1,0 +1,47 @@
+<configuration>
+    <!-- Аппендер для записи логов в файл с ротацией по времени и размеру -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/file-deleter.log</file>
+        <!-- Политика ротации: файлы архивируются ежедневно и при достижении размера 10MB -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- Шаблон имени архивных файлов: file-deleter-2025-04-05.0.log -->
+            <fileNamePattern>logs/file-deleter-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <!-- Максимальный размер одного файла -->
+            <maxFileSize>10MB</maxFileSize>
+            <!-- Хранить до 30 дней архивных файлов -->
+            <maxHistory>30</maxHistory>
+            <!-- Общий лимит дискового пространства под логи — 1 ГБ -->
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+        <!-- Формат вывода сообщений в файл -->
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Асинхронный аппендер для повышения производительности записи в файл -->
+    <appender name="ASYNC_FILE" class="ch.qos.logback.classic.AsyncAppender">
+        <!-- Ссылка на синхронный аппендер FILE -->
+        <appender-ref ref="FILE"/>
+        <!-- Размер очереди сообщений — 256 записей -->
+        <queueSize>256</queueSize>
+        <!-- Не отбрасывать сообщения при заполнении очереди (ждать освобождения) -->
+        <discardingThreshold>0</discardingThreshold>
+        <!-- Не включать данные о вызывающем классе (уменьшает нагрузку) -->
+        <includeCallerData>false</includeCallerData>
+    </appender>
+
+    <!-- Аппендер для вывода логов в консоль с цветовой подсветкой уровней -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- Цветной вывод: время, уровень (с подсветкой), имя логгера и сообщение -->
+            <pattern>%date %highlight(%level) %cyan(%logger{36}) - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Корневой логгер: уровень info, использует консольный и асинхронный файловый аппендеры -->
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="ASYNC_FILE"/>
+    </root>
+</configuration>
