@@ -1,11 +1,11 @@
-package com.rit.crossdev.jaga.minio.cleaner
+package ru.lavrinenko.minio.cleaner
 
-import com.rit.crossdev.jaga.minio.cleaner.conf.AppConfig
-import com.rit.crossdev.jaga.minio.cleaner.conf.ssh.SshTunnel
-import com.rit.crossdev.jaga.minio.cleaner.service.AttachmentDeleteService
-import com.rit.crossdev.jaga.minio.cleaner.service.ProjectDeleteService
-import com.rit.crossdev.jaga.minio.cleaner.service.UserDeleteService
-import com.rit.crossdev.jaga.minio.cleaner.util.ResourceUtil
+import ru.lavrinenko.minio.cleaner.conf.AppConfig
+import ru.lavrinenko.minio.cleaner.conf.ssh.SshTunnel
+import ru.lavrinenko.minio.cleaner.service.AttachmentDeleteService
+import ru.lavrinenko.minio.cleaner.service.ProjectDeleteService
+import ru.lavrinenko.minio.cleaner.service.UserDeleteService
+import ru.lavrinenko.minio.cleaner.util.ResourceUtil
 import org.slf4j.LoggerFactory
 import kotlin.system.exitProcess
 

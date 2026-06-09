@@ -1,10 +1,10 @@
-package com.rit.crossdev.jaga.minio.cleaner.service
+package ru.lavrinenko.minio.cleaner.service
 
-import com.rit.crossdev.jaga.minio.cleaner.conf.AppConfig
-import com.rit.crossdev.jaga.minio.cleaner.conf.HttpClientConfig
-import com.rit.crossdev.jaga.minio.cleaner.conf.datasources.DbClient
-import com.rit.crossdev.jaga.minio.cleaner.util.formatMillisWithDecimals
-import com.rit.crossdev.jaga.minio.cleaner.util.toJson
+import ru.lavrinenko.minio.cleaner.conf.AppConfig
+import ru.lavrinenko.minio.cleaner.conf.HttpClientConfig
+import ru.lavrinenko.minio.cleaner.conf.datasources.DbClient
+import ru.lavrinenko.minio.cleaner.util.formatMillisWithDecimals
+import ru.lavrinenko.minio.cleaner.util.toJson
 import okhttp3.Credentials
 import org.slf4j.LoggerFactory
 import java.io.IOException

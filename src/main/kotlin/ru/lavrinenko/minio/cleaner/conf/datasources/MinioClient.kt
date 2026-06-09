@@ -1,7 +1,7 @@
-package com.rit.crossdev.jaga.minio.cleaner.conf.datasources
+package ru.lavrinenko.minio.cleaner.conf.datasources
 
-import com.rit.crossdev.jaga.minio.cleaner.conf.AppConfig
-import com.rit.crossdev.jaga.minio.cleaner.conf.ssh.SshTunnel
+import ru.lavrinenko.minio.cleaner.conf.AppConfig
+import ru.lavrinenko.minio.cleaner.conf.ssh.SshTunnel
 
 /**
  * Клиент для работы с MinIO, настроенный в зависимости от использования SSH-туннеля.

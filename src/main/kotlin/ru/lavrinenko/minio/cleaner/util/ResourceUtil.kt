@@ -1,4 +1,4 @@
-package com.rit.crossdev.jaga.minio.cleaner.util
+package ru.lavrinenko.minio.cleaner.util
 
 
 object ResourceUtil {

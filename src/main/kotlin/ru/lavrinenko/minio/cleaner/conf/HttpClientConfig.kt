@@ -1,4 +1,4 @@
-package com.rit.crossdev.jaga.minio.cleaner.conf
+package ru.lavrinenko.minio.cleaner.conf
 
 import okhttp3.OkHttpClient
 import java.net.http.HttpClient

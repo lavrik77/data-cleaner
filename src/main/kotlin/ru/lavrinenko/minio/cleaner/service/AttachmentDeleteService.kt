@@ -1,9 +1,9 @@
-package com.rit.crossdev.jaga.minio.cleaner.service
+package ru.lavrinenko.minio.cleaner.service
 
-import com.rit.crossdev.jaga.minio.cleaner.conf.AppConfig
-import com.rit.crossdev.jaga.minio.cleaner.conf.datasources.DbClient
-import com.rit.crossdev.jaga.minio.cleaner.conf.datasources.MinioClient
-import com.rit.crossdev.jaga.minio.cleaner.util.toJson
+import ru.lavrinenko.minio.cleaner.conf.AppConfig
+import ru.lavrinenko.minio.cleaner.conf.datasources.DbClient
+import ru.lavrinenko.minio.cleaner.conf.datasources.MinioClient
+import ru.lavrinenko.minio.cleaner.util.toJson
 import io.minio.RemoveObjectArgs
 import io.minio.StatObjectArgs
 import io.minio.errors.ErrorResponseException

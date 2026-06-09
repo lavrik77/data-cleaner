@@ -1,9 +1,9 @@
-package com.rit.crossdev.jaga.minio.cleaner.conf.ssh
+package ru.lavrinenko.minio.cleaner.conf.ssh
 
 import com.jcraft.jsch.JSch
 import com.jcraft.jsch.JSchException
 import com.jcraft.jsch.Session
-import com.rit.crossdev.jaga.minio.cleaner.conf.AppConfig
+import ru.lavrinenko.minio.cleaner.conf.AppConfig
 import org.slf4j.LoggerFactory
 import java.io.Closeable
 
